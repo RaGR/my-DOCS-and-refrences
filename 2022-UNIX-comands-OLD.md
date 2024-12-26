@@ -118,3 +118,45 @@ sudo chmod +x /usr/share/applications/xampp.desktop
 **Note:** Some commands may require root privileges.
 
 This cheat sheet provides a concise overview of common Linux network management commands. For more detailed information and usage examples, refer to the manual pages for each command (e.g., `man ping`, `man ifconfig`).
+
+
+**nmcli Commands**
+
+* **General**
+    * `nmcli general status`: Show overall NetworkManager status
+    * `nmcli general hostname`: Get/set system hostname
+    * `nmcli general permissions`: Show NetworkManager permissions
+    * `nmcli general logging`: Show/set NetworkManager logging level
+    * `nmcli general reload`: Reload NetworkManager configuration
+
+* **Device Management**
+    * `nmcli dev status`: Show network device status
+    * `nmcli dev connect <device>`: Connect to a network device
+    * `nmcli dev disconnect <device>`: Disconnect from a network device
+    * `nmcli dev wifi list`: List available Wi-Fi networks
+    * `nmcli dev wifi connect <SSID>`: Connect to a Wi-Fi network
+
+* **Connection Management**
+    * `nmcli con show`: Show all connections
+    * `nmcli con show <connection name>`: Show details of a specific connection
+    * `nmcli con add <type> [options]`: Create a new connection
+        * Examples:
+            * `nmcli con add type wifi con-name "MyWifi" ssid "MyWifiSSID" password "MyWifiPassword"`
+            * `nmcli con add type ethernet ifname <interface>`
+    * `nmcli con mod <connection name> [property] <value>`: Modify a connection
+        * Examples:
+            * `nmcli con mod "MyWifi" ipv4.addresses "192.168.1.100/24"`
+            * `nmcli con mod "MyWifi" ipv4.dns "8.8.8.8,8.8.4.4"`
+    * `nmcli con up <connection name>`: Activate a connection
+    * `nmcli con down <connection name>`: Deactivate a connection
+    * `nmcli con del <connection name>`: Delete a connection
+
+**Note:**
+
+* `<connection name>` refers to the name of the connection you want to manage.
+* `<device>` refers to the network device name (e.g., `wlan0`, `eth0`).
+* `<SSID>` refers to the SSID of the Wi-Fi network.
+* `<interface>` refers to the network interface name.
+
+This list provides a general overview of common `nmcli` commands. For detailed usage and available options, refer to the `nmcli` man page (`man nmcli`).
+
