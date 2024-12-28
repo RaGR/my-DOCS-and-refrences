@@ -50,4 +50,4 @@ I hope this real-world example clarifies these concepts!
 
 if you have any better explanations please help us grow this txt!
 
-have any guestions? -> ramtin7.samadi@gmail.com
+have any questions? -> ramtin7.samadi@gmail.com
