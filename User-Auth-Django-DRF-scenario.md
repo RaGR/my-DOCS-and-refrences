@@ -1,4 +1,4 @@
-Certainly, let's break down authentication, login, and logout in a real-world scenario using your API.
+let's break down authentication, login, and logout in a real-world scenario using your API.
 
 **Scenario:**
 
@@ -47,3 +47,5 @@ Imagine a user wants to use your to-do list API.
 This scenario demonstrates how authentication, login, and logout work together within the context of your to-do list API. By using JWT, you ensure secure and stateless authentication for your users.
 
 I hope this real-world example clarifies these concepts!
+if you have any better explanations please help us grow this txt!
+have any guestions? -> ramtin7.samadi@gmail.com
