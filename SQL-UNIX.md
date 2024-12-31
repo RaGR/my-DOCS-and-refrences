@@ -13,6 +13,7 @@ apt-get install pkg-config
 sudo service mysql status
 sudo ss -tap | grep mysql
 sudo service mysql restart
+sudo service mysql status
 sudo journalctl -u mysql
 sudo systemctl restart mysql.service
 
