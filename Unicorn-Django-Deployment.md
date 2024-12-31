@@ -26,7 +26,7 @@ here we can list and view all files containig .service in this magic dir, looks 
 
 inside of a service file looks something like this(Don't worrie, everything in Linux is eather a file or a dir so nothing wont go wrong):
 
-```sh
+```bash
 [Unit]
 Description=OpenBSD Secure Shell server
 Documentation=man:sshd(8) man:sshd_config(5)
