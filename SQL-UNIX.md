@@ -1,6 +1,6 @@
 DOC from the good guys (Ubuntu Family):
 
-[website]: https://ubuntu.com/server/docs/install-and-configure-a-mysql-server
+[website][https://ubuntu.com/server/docs/install-and-configure-a-mysql-server]
 
 # MYSQL INSTALATION AND CONFIGURATION
 
