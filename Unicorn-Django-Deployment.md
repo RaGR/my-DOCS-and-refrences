@@ -50,3 +50,11 @@ RuntimeDirectoryMode=0755
 WantedBy=multi-user.target
 Alias=sshd.service
 ```
+
+
+
+back to the topic if you install GUNICORN and type in terminall:
+
+```bash
+gunicorn myproject.wsgi
+```bash
