@@ -1,4 +1,4 @@
-#MYSQL INSTALATION AND CONFIGURATION
+# MYSQL INSTALATION AND CONFIGURATION
 
 ```bash
 sudo apt install mysql-server
@@ -7,6 +7,8 @@ sudo ss -tap | grep mysql
 sudo service mysql restart
 sudo journalctl -u mysql
 sudo systemctl restart mysql.service
+
+mysql -u root -p
 ```
 
 # MySQL Command Line Client
