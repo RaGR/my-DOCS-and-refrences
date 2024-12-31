@@ -2,6 +2,14 @@
 
 ```bash
 sudo apt install mysql-server
+
+alter:
+sudo apt-get install python3.12.3-dev 
+sudo apt-get install mysql-client
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install libssl-dev
+apt-get install pkg-config
+
 sudo service mysql status
 sudo ss -tap | grep mysql
 sudo service mysql restart
@@ -18,4 +26,6 @@ use DB_Name;
 show tables;
 
 SELECT * FROM Table_Name;
+CREATE DATABASE db_name;
+GRANT ALL PRIVILEGES ON *.* TO 'db_user'@'localhost' IDENTIFIED BY 'P@s$w0rd123!';
 ``` 
