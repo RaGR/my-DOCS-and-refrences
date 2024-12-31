@@ -76,3 +76,46 @@ sudo systemctl enable gunicorn.socket
 ```
 
 
+
+
+
+# UNICORN SOCKET COnF:
+/etc/systemd/system/gunicorn.socket
+
+```bash
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+SocketUser=deploy
+SocketGroup=www-data
+SocketMode=0660
+
+[Install]
+WantedBy=sockets.target
+
+```
+
+
+# UNICORN SERVICE COnf:
+```bash
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=deploy
+Group=www-data
+WorkingDirectory= /home/vboxuser/Django DRF todolist/mysite01
+ExecStart= /home/vboxuser/Django DRF todolist/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          mysite01.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+```
+
