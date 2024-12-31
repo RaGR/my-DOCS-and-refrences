@@ -1,11 +1,11 @@
-so system-md is the firts procces that luches into unix base OSs and the last one to terminate when shuting down.
+so system-md is the firts procces that lunches into unix base OSs and the last one to terminate when shuting down.
 
-i was wondering how to make multiple scripts happen at once in a single terminal without opening a new terminal. and here is your advanced profational answer:
+i was wondering how to make multiple scripts happen at once in a single terminal without opening a new one. and here is your advanced profational answer:
 
 
 # WHAT IS A SERVICE IN UNIX BASED SYSTEMS:
 
-A Linux service is a background process that runs continuously to perform specific tasks. Services can start automatically at boot time and run without user intervention. Examples include web servers, database servers, and network services.
+A Linux service is a **background process** that runs continuously to perform specific tasks. Services can start automatically at boot time and run without user intervention. Examples include web servers, database servers, and network services.
 
 yes, so basicaly its a magic wood if you manage to create them and manage them and configure currectly
 
@@ -23,3 +23,30 @@ ls -la | grep .service
 
 here we can list and view all files containig .service in this magic dir, looks something like this:
 ![image](https://github.com/user-attachments/assets/ee9000c9-427b-4922-9fab-c225d99b4ba2)
+
+inside of a service file looks something like this(Don't worrie, everything in Linux is eather a file or a dir so nothing wont go wrong):
+
+```sh
+[Unit]
+Description=OpenBSD Secure Shell server
+Documentation=man:sshd(8) man:sshd_config(5)
+After=network.target auditd.service
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run
+
+[Service]
+EnvironmentFile=-/etc/default/ssh
+ExecStartPre=/usr/sbin/sshd -t
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
+ExecReload=/usr/sbin/sshd -t
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=notify
+RuntimeDirectory=sshd
+RuntimeDirectoryMode=0755
+
+[Install]
+WantedBy=multi-user.target
+Alias=sshd.service
+```
