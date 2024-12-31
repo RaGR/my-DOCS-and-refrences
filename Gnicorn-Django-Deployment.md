@@ -1,3 +1,6 @@
+Gunicorn DOC:
+https://docs.gunicorn.org/en/latest/deploy.html
+
 so system-md is the firts procces that lunches into unix base OSs and the last one to terminate when shuting down.
 
 i was wondering how to make multiple scripts happen at once in a single terminal without opening a new one. and here is your advanced profational answer:
@@ -54,7 +57,10 @@ Alias=sshd.service
 
 
 back to the topic if you install GUNICORN and type in terminall:
-
+(myproject = name of your Django project)
 ```bash
 gunicorn myproject.wsgi
-```bash
+```
+now python GODs will aid you and with out python manage.py runserver 0.0.0.0:8000 the gunicorn will communicate with your Django project and answer client user requests when they happen.
+
+
