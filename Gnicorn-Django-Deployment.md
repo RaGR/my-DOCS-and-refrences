@@ -99,6 +99,7 @@ WantedBy=sockets.target
 
 
 # UNICORN SERVICE COnf:
+/etc/systemd/system/gunicorn.service
 ```bash
 [Unit]
 Description=gunicorn daemon
