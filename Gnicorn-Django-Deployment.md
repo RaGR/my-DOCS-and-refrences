@@ -64,3 +64,15 @@ gunicorn myproject.wsgi
 now python GODs will aid you and with out python manage.py runserver 0.0.0.0:8000 the gunicorn will communicate with your Django project and answer client user requests when they happen.
 
 
+
+
+```bash
+sudo systemctl daemon-reload
+```
+
+```bash
+sudo systemctl start gunicorn.socket
+sudo systemctl enable gunicorn.socket
+```
+
+
