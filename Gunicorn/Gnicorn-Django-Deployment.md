@@ -120,3 +120,7 @@ ExecStart= /home/vboxuser/Django DRF todolist/venv/bin/gunicorn \
 WantedBy=multi-user.target
 ```
 
+curl to check connection:
+```bash
+-u www-data curl --unix-socket /run/gunicorn.sock http
+```
