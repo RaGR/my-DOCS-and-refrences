@@ -85,3 +85,9 @@ To deploy your Django project on Windows using Nginx as the web server, follow t
   - Manage environment variables for different settings.
 
 By following these steps, you should successfully deploy your Django project on Windows using Nginx as the web server.
+
+
+nginx log location
+```bash
+sudo tail -f /var/log/nginx/error.log
+```
