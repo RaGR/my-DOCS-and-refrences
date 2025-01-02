@@ -1,4 +1,5 @@
 https://itfix.org.uk/taming-the-terminal-advanced-linux-command-line-tips-tricks-and-productivity-hacks-for-power-users/
+https://blog.devops.dev/linux-series-2-advanced-linux-command-line-techniques-47a609bf52be
 https://tryhackme.com/r/module/linux-fundamentals
 
 
