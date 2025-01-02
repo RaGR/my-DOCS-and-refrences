@@ -1,3 +1,7 @@
+https://itfix.org.uk/taming-the-terminal-advanced-linux-command-line-tips-tricks-and-productivity-hacks-for-power-users/
+https://tryhackme.com/r/module/linux-fundamentals
+
+
 ### Advanced Linux Concepts for DevOps and Python Backend Development
 
 **1. Shell Scripting:**
