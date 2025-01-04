@@ -170,3 +170,11 @@ With Django Channels, you can easily build a real-time chat application:
 - Use it for real-time features like chat apps, live notifications, and more.
 
 Let me know if you need help setting it up or have more questions! 🚀
+
+
+
+hyper corn ASGI serv ER:
+
+https://hypercorn.readthedocs.io/en/latest/
+
+
