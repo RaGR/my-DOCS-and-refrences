@@ -1,4 +1,4 @@
-Ah, you're talking about **Django Channels**! Yes, you're absolutely correct—**Django Channels** is the way to handle WebSockets (and other asynchronous protocols) in Django. Let me break it down for you and explain how it works, why it's useful, and how to get started.
+   **Django Channels** is the way to handle WebSockets (and other asynchronous protocols) in Django. Let me break it down for you and explain how it works, why it's useful, and how to get started.
 
 ---
 
