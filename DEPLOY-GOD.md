@@ -1,16 +1,6 @@
 Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Nginx on an Ubuntu server involves several steps. Below is a comprehensive guide to help you through the process:
 
-C dependent python pakages require :
-```
-sudo apt-get install libffi-dev
-```
 
-some packages neeed this pavkge config as well - so mind installing and updating it as well on your ubuntu server:
-
-```bash
-sudo apt-get install pkg-config
-```
----
 
 ### **1. Prepare the Ubuntu Server**
 1. **Update the system**:
@@ -18,9 +8,23 @@ sudo apt-get install pkg-config
    sudo apt-get update && sudo apt-get upgrade -y
    ```
 
+
+
 2. **Install essential system packages**:
    ```bash
    sudo apt-get install -y python3-pip python3-venv python3-dev libmysqlclient-dev build-essential nginx unixodbc-dev
+   ```
+
+   
+C dependent python pakages require libffi. so mind installing that via command provided on your system:
+   ```
+   sudo apt-get install libffi-dev
+   ```
+
+some packages need this packge-config as well - so mind installing and updating it as well on your ubuntu server:
+
+   ```bash
+   sudo apt-get install pkg-config
    ```
 
 3. **Install Redis** (required for Channels and Celery):
