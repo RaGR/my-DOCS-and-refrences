@@ -283,4 +283,27 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
 
 ---
 
+# Celery as a service
+```bash
+[Unit]
+Description=Celery Service
+After=network.target
+
+[Service]
+Type=forking
+User=your_user
+Group=your_group
+WorkingDirectory=/path/to/your/django/project
+ExecStart=/path/to/your/virtualenv/bin/celery -A your_project worker --loglevel=info
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```bash
+
+```bash
+sudo systemctl enable celery.service
+sudo systemctl start celery.service
+```
+
 By following these steps, you should be able to deploy your ASGI-based Django project with Channels, WebSockets, and Hypercorn on an Ubuntu server, including support for Microsoft SQL Server.
