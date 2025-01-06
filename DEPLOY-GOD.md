@@ -150,12 +150,16 @@ sudo apt-get install pkg-config
 ---
 
 ### **7. Set Up InfluxDB**
-1. **Log in to InfluxDB**:
+0. make sure you have the influxDB client installed:
+   ```
+   sudo apt install influxdb-client
+   ```
+2. **Log in to InfluxDB**:
    ```bash
    influx
    ```
 
-2. **Create a database and user**:
+3. **Create a database and user**:
    ```sql
    CREATE DATABASE your_influxdb_name;
    CREATE USER your_influxdb_user WITH PASSWORD 'your_influxdb_password' WITH ALL PRIVILEGES;
