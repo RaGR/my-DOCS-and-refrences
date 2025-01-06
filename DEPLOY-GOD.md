@@ -2,7 +2,12 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
 C dependent python pakages require :
 ```
 sudo apt-get install libffi-dev
+```
 
+some packages neeed this pavkge config as well - so mind installing and updating it as well on your ubuntu server:
+
+```bash
+sudo apt-get install pkg-config
 ```
 ---
 
