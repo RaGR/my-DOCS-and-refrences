@@ -121,6 +121,11 @@ sudo apt-get install pkg-config
    MSSQL_DSN=your_mssql_dsn
    ```
 
+   or you can use a json file to fill in information in there. then you can write a .py script that converts data from json file to .env file
+   ```bash
+   python3 env_creator.py
+   ```
+
 3. **Run the `env_gen` script** (if available) to generate environment variables from a JSON file:
    ```bash
    python /path/to/your/project/env_gen.py
