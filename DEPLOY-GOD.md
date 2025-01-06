@@ -16,31 +16,31 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
    ```
 
    
-C dependent python pakages require libffi. so mind installing that via command provided on your system:
+3. C dependent python pakages require libffi. so mind installing that via command provided on your system:
    ```
    sudo apt-get install libffi-dev
    ```
 
-some packages need this packge-config as well - so mind installing and updating it as well on your ubuntu server:
+4. some packages need this packge-config as well - so mind installing and updating it as well on your ubuntu server:
 
    ```bash
    sudo apt-get install pkg-config
    ```
 
-3. **Install Redis** (required for Channels and Celery):
+5. **Install Redis** (required for Channels and Celery):
    ```bash
    sudo apt-get install -y redis-server
    sudo systemctl start redis
    sudo systemctl enable redis
    ```
 
-4. **Install MySQL** (if not already installed):
+6. **Install MySQL** (if not already installed):
    ```bash
    sudo apt-get install -y mysql-server
    sudo mysql_secure_installation
    ```
 
-5. **Install InfluxDB** (for logs):
+7. **Install InfluxDB** (for logs):
    ```bash
    sudo apt-get install -y influxdb
    sudo systemctl start influxdb
