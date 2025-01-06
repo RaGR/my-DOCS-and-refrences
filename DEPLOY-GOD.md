@@ -283,4 +283,4 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
 
 ---
 
-By following these steps, you should be able to deploy your ASGI-based Django project with Channels, WebSockets, and Hypercorn on an Ubuntu server, including support for Microsoft SQL Server. Let me know if you need further assistance!
+By following these steps, you should be able to deploy your ASGI-based Django project with Channels, WebSockets, and Hypercorn on an Ubuntu server, including support for Microsoft SQL Server.
