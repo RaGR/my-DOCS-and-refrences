@@ -35,7 +35,7 @@ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 
 
 2. **Install essential system packages**:
    ```bash
-   sudo apt-get install -y python3.10 python3.10-pip python3.10-venv python3.10-dev libmysqlclient-dev build-essential nginx unixodbc-dev
+   sudo apt-get install -y python3 python3-pip python3-venv python3-dev libmysqlclient-dev build-essential nginx unixodbc-dev
    ```
 
    
