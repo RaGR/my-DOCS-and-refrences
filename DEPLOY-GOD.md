@@ -3,7 +3,6 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
 
 ```bash
 ls /usr/bin/python*
-apt-get purge --auto-remove python3
 apt-get purge --auto-remove python3.12
 
 
