@@ -6,6 +6,14 @@ ls /usr/bin/python*
 apt-get purge --auto-remove python3
 apt-get purge --auto-remove python3.12
 
+
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+
+
+sudo apt-get install -y python3.10 python3.10-venv python3.10-dev
 ```
 
 
