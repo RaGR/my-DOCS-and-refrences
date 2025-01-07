@@ -34,3 +34,32 @@ SELECT * FROM Table_Name;
 CREATE DATABASE db_name;
 GRANT ALL PRIVILEGES ON *.* TO 'db_user'@'localhost' IDENTIFIED BY 'P@s$w0rd123!';
 ``` 
+
+
+
+
+
+```bash
+# Access MySQL shell
+sudo mysql
+
+# Check the password policy
+SHOW VARIABLES LIKE 'validate_password%';
+
+# Lower the password policy (optional)
+SET GLOBAL validate_password.policy = LOW;
+SET GLOBAL validate_password.length = 6;
+
+# Set a password for the root user
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+FLUSH PRIVILEGES;
+
+# Exit MySQL shell
+exit
+
+# Restart MySQL
+sudo systemctl restart mysql
+
+# Test the new password
+mysql -u root -p
+```
