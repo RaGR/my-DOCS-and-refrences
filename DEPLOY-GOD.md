@@ -2,10 +2,16 @@ Deploying a complex Django project with Redis, Celery, MySQL, InfluxDB, and Ngin
 
 
 ```bash
+
+# list all installed python vertions:
 ls /usr/bin/python*
+
+# not recomended - uninstalling python will dammage system files:
+# try setting bash command to execute desired .ver or specify in your commands
+# like -> 'python3.10 -m venv ... (.etc)'
 apt-get purge --auto-remove python3.12
 
-
+# these will enable multiple versions of python available:
 sudo apt-get update
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -13,6 +19,9 @@ sudo apt-get update
 
 
 sudo apt-get install -y python3.10 python3.10-venv python3.10-dev
+
+# to make python3 execute version 3.10:
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 ```
 
 
