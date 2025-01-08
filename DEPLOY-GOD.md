@@ -22,6 +22,12 @@ sudo apt-get install -y python3.10 python3.10-venv python3.10-dev
 
 # to make python3 execute version 3.10:
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+
+# to make python command exeute python 3.10:
+
+sudo ln -s /usr/bin/python3.10 /usr/bin/python
+
+
 ```
 
 
