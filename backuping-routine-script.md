@@ -136,3 +136,9 @@ chmod +x backup_configs.sh
 - The script can be automated using `cron` for regular backups.
 
 Let me know if you need further assistance!
+
+
+# curling a websocket connection:
+```
+ curl -v   -H "Connection: Upgrade"   -H "Upgrade: websocket"   -H "Sec-WebSocket-Version: 13"   -H "Sec-WebSocket-Key: $(openssl rand -base64 16)"   http://yout-server-addrs/your/path/
+```
